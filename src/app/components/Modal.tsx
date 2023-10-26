@@ -190,7 +190,10 @@ function Modal({
             >
               {Object.keys(Category).map((categoryType, index) => {
                 return (
-                  <option value={Object.values(Category)[index]}>
+                  <option
+                    key={categoryType}
+                    value={Object.values(Category)[index]}
+                  >
                     {categoryType}
                   </option>
                 );
