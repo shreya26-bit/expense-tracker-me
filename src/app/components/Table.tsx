@@ -56,7 +56,7 @@ function Table({ expenses }: { expenses: ExpenseItem[] }) {
         <div className="mt-2 overflow-y-scroll scroll whitespace-nowrap scroll-smooth h-[620px]  ">
         {expenses.map((expense) => {
           return (
-            <div className="flex flex-col bg-white   bg-opacity-[0.1]    w-[100%] rounded-[13px] mt-2 ">
+            <div key={expense.id} className="flex flex-col bg-white   bg-opacity-[0.1]    w-[100%] rounded-[13px] mt-2 ">
               <div className="flex flex-row justify-between text-white p-3">
               <p className="text-white">  ₹{expense.price}</p>
               <div className="flex px-3">
