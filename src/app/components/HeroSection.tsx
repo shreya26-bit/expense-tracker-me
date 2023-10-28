@@ -32,7 +32,7 @@ function Navbar() {
     return null; // or handle the case where expenses is not provided
   }
   // Calculate the total price
-   const total = expenses.reduce((sum, expense) => {
+  const total = expenses.reduce((sum, expense) => {
     // Log each expense and its price during the calculation
     console.log("Expense:", expense);
     console.log("Price:", expense.price);
@@ -56,7 +56,6 @@ function Navbar() {
 
     return categoryTotalPrices;
   }
-
 
   // const expenses = ...; // Your array of expenses
   const categoryTotalPrices = calculateCategoryTotalPrices(expenses);
@@ -85,7 +84,6 @@ function Navbar() {
   return (
     <>
       <Modal
-
         show={modalIsOpen}
         onClose={setModalIsOpen}
         expenses={expenses}
@@ -95,31 +93,6 @@ function Navbar() {
         <h1 className="text-white  text-5xl font-sans font-bold m-6 ">
           🕵️SPENDIFY🕵️
         </h1>
-        {/* <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-          <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-            <h1 className="text-white text-5xl font-sans font-bold m-6 ">
-              🕵️SPENDIFY🕵️
-            </h1>
-            <div className="mobile-menu  block md:hidden">
-              {!navbarOpen ? (
-                <button
-                  onClick={() => setNavbarOpen(true)}
-                  className="flex items-center px-3 py-2 border rounded border-slate-200 text-red-900 hover:text-white  hover:border-white"
-                >
-                  {" "}
-                  <Bars3Icon className="h-5 w-5" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setNavbarOpen(false)}
-                  className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-                >
-                  <XMarkIcon className="h-5 w-5" />
-                </button>
-              )}
-            </div>
-          </div>
-        </nav> */}
 
         <div
           className={
@@ -161,19 +134,7 @@ function Navbar() {
             </div>
           ) : (
             <>
-              {/* <div className=" bg-white m-4  bg-opacity-[0.1] md:w-[40] h-[200px] rounded-2xl lg:hidden md:hidden sm:hidden">
-                <p className="p-2 text-3xl mt-4">Tracker Board😉</p>
-                <div className="flex mt-4">
-                  <div className="flex flex-col w-[100%]  text-black rounded-2xl p-2 m-2 bg-[#c6c8f2]">
-                    <h1 className="font-bold text-2xl">Total</h1>
-                    <span className="font-bold text-[25px]">₹ {total}</span>
-                  </div>
-                </div>
-              </div> */}
               <div className="  bg-white m-4 bg-opacity-[0.05] lg:w-[50%] h-[710px] rounded-2xl md:w-[100%]">
-                {/* <h1 className="text-4xl rounded-3xl p-4 bg-opacity-[0.09]  font-semibold">
-                Purchase details
-              </h1> */}
                 <Table expenses={expenses} />
               </div>
             </>
@@ -245,7 +206,6 @@ function Navbar() {
             </div>
           </div>
         </div>
-  
       </div>
     </>
   );
