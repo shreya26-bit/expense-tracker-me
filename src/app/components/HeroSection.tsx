@@ -122,24 +122,23 @@ function Navbar() {
             className="mt-8 m-4 border-[1px] bg-gradient-to-r from-purple-900 to-pink-400 rounded-2xl p-2 font-bold text-black hover:bg-white"
           >
             Add Expenses{" "}
-          </button>
+          </button>  
         </div>
 
         <div className=" flex lg:flex-row md:flex-row flex-col justify-between  text-white mt-5 ">
           {expenses.length == 0 ? (
             <div className="flex flex-col px-4">
-              <div className="text-black font-extrabold bg-[#eff6be] p- rounded-2xl mt- text-2xl">
+              <div className="text-black font-extrabold bg-[#eff6be] p- rounded-3xl mt- text-2xl p-3">
                 What are you thinking, Add your first expense?😉
               </div>
             </div>
           ) : (
-            <>
+           <>
               <div className="  bg-white m-4 bg-opacity-[0.05] lg:w-[50%] h-[710px] rounded-2xl md:w-[100%]">
                 <Table expenses={expenses} />
               </div>
-            </>
-          )}
-          <div className="flex flex-col lg:w-[50%] ">
+            
+            <div className="flex flex-col lg:w-[50%] ">
             <div className=" bg-white m-4  bg-opacity-[0.1] md:w-[40] rounded-2xl  ">
               <p className="p-2 text-2xl mt-4">Expenses Structure</p>
               <div className="flex justify-center">
@@ -158,6 +157,9 @@ function Navbar() {
               </div>
             </div>
           </div>
+          </>
+          )}
+        
         </div>
         <div className=" lg:flex  lg:flex-row justify-between flex-col text-white mt-10">
           <div className="  bg-white m-2 bg-opacity-[0.05] lg:w-[100%] lg:h-[250px] md:[250px] rounded-2xl ">
